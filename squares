@@ -1,0 +1,38 @@
+////////// DO NOT EDIT HEADER! //////////
+#include <iostream>                    //
+#include "CTurtle.hpp"                 //
+#include "CImg.h"                      //
+using namespace cturtle;               //
+using namespace std;                   //
+/////////////////////////////////////////
+
+int main(int argc, char** argv) {
+  
+  TurtleScreen screen(400, 300); //You may edit the dimensions to fit your window
+  Turtle tina(screen);
+
+  
+  //add code below this line
+ tina.pencolor({"blue"});
+ tina.width(3);
+ tina.shape("arrow");
+ tina.speed(TS_SLOW);
+ tina.forward(150);
+ for(int i=0; i<4; i++){
+  tina.right(90);
+  tina.forward(40);
+  tina.right(90);
+  tina.forward(40);
+  tina.right(90);
+  tina.forward(150);
+ }
+
+
+
+
+  //add code above this line
+  
+  screen.exitonclick();
+  return 0;
+  
+}
